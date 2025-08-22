@@ -105,7 +105,7 @@ export default function Ministries() {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-6 text-gray-900">Want to Get Involved?</h2>
           <p className="text-xl text-gray-700 mb-8 max-w-2xl mx-auto">
-            We'd love to help you find the perfect ministry where you can use your gifts and grow in faith.
+            We would love to help you find the perfect ministry where you can use your gifts and grow in faith.
           </p>
           <button className="bg-church-orange hover:bg-church-orange-light text-white font-bold py-3 px-8 rounded-lg transition-colors">
             Contact Us
