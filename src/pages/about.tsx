@@ -143,7 +143,7 @@ export default function About() {
               <h2 className="text-3xl font-bold mb-6 text-gray-900">Our Vision</h2>
               <div className="prose prose-lg text-gray-700">
                 <blockquote className="border-l-4 border-church-orange pl-4 italic mb-6 text-xl">
-                  "Let Lord Jesus Christ prepare and present us to Himself as a radiant church, free from stain or blemish, but holy and blameless." (Ephesians 5:27)
+                  &quot;Let Lord Jesus Christ prepare and present us to Himself as a radiant church, free from stain or blemish, but holy and blameless.&quot; (Ephesians 5:27)
                 </blockquote>
                 <p>
                   Our vision is to be a church that reflects the glory and holiness of Christ, serving as a beacon of hope and truth in our community and beyond.
@@ -196,7 +196,7 @@ export default function About() {
 
           <div className="max-w-4xl mx-auto mb-8">
             <p className="text-gray-700 text-center mb-6">
-              Our local church is governed by a Board of Elders elected by the congregation. The Board selects a leader, who is approved by the congregation, to manage the church's spiritual and administrative affairs.
+              Our local church is governed by a Board of Elders elected by the congregation. The Board selects a leader, who is approved by the congregation, to manage the church&apos;s spiritual and administrative affairs.
             </p>
             <p className="text-gray-900 font-semibold text-center">
               Contact the Church Leadership for any inquiries
@@ -212,6 +212,7 @@ export default function About() {
                     alt={leader.name}
                     fill
                     className="object-cover"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   />
                 </div>
                 <div className="p-6">

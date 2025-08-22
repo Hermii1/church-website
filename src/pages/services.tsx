@@ -82,9 +82,9 @@ export default function Services() {
         },
         {
           time: '10:30 AM - 12:00 PM CST',
-          title: "Children's Sunday School",
+          title: "Children&apos;s Sunday School",
           description: 'Sunday school service for children.',
-          location: 'Children\'s Wing'
+          location: 'Children&apos;s Wing'
         }
       ]
     },
@@ -215,7 +215,7 @@ export default function Services() {
               </li>
               <li className="flex items-start">
                 <span className="text-church-orange font-bold mr-2 mt-1">•</span>
-                <span>Children's Sunday School runs concurrently with our main worship service.</span>
+                <span>Children&apos;s Sunday School runs concurrently with our main worship service.</span>
               </li>
               <li className="flex items-start">
                 <span className="text-church-orange font-bold mr-2 mt-1">•</span>
@@ -231,7 +231,7 @@ export default function Services() {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-6 text-gray-900">Join Us This Week</h2>
           <p className="text-xl text-gray-700 mb-8 max-w-3xl mx-auto">
-            We'd love to have you join us for worship, prayer, and fellowship. Experience the warmth of our church community.
+            We&apos;d love to have you join us for worship, prayer, and fellowship. Experience the warmth of our church community.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <button className="bg-church-orange hover:bg-church-orange-light text-white font-bold py-3 px-8 rounded-lg transition-colors">
