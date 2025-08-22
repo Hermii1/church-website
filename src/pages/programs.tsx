@@ -3,7 +3,7 @@ import Layout from '@/components/layout/Layout';
 import { useState } from 'react';
 import Link from 'next/link';
 
-export default function Services() {
+export default function Programs() {
   const [activeDay, setActiveDay] = useState('all');
 
   const gatherings = [

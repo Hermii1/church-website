@@ -9,7 +9,6 @@ export default function Header() {
     { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
     { name: 'Events', path: '/events' },
-    { name: 'Leadership', path: '/leadership' },
     { name: 'Ministries', path: '/ministries' },
     { name: 'Programs', path: '/programs' },
     { name: 'Contact', path: '/contact' },
