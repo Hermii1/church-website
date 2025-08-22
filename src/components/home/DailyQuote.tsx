@@ -37,7 +37,7 @@ export default function DailyQuote() {
         <h2 className="text-2xl md:text-3xl font-bold mb-8">Daily Inspiration</h2>
         <div className="max-w-3xl mx-auto">
           <blockquote className="text-xl italic mb-4">
-            "{quote.text}"
+            &quot;{quote.text}&quot;
           </blockquote>
           <p className="text-church-orange-light font-semibold">
             {quote.verse}

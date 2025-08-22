@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import Image from 'next/image'; // Add this import
+
 import { useState } from 'react';
 
 export default function Header() {
