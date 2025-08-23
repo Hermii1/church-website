@@ -1,64 +1,67 @@
 import Head from 'next/head';
 
+import { useTranslation } from '@/hooks/useTranslation';
 
 export default function Events() {
+  const { t } = useTranslation();
+
   const upcomingEvents = [
     {
-      title: "Sunday Worship Service",
-      date: "Every Sunday",
+      title: t('events.sundayService'),
+      date: t('events.everySunday'),
       time: "10:00 AM - 12:00 PM",
-      location: "Main Sanctuary",
-      description: "Join us for our weekly worship service with preaching, prayer, and fellowship."
+      location: t('events.mainSanctuary'),
+      description: t('events.sundayServiceDesc')
     },
     {
-      title: "Weekly Bible Study",
-      date: "Every Wednesday",
+      title: t('events.weeklyBibleStudy'),
+      date: t('events.everyWednesday'),
       time: "7:00 PM - 8:30 PM",
-      location: "Fellowship Hall",
-      description: "Deep dive into God's Word with our community Bible study session."
+      location: t('events.fellowshipHall'),
+      description: t('events.bibleStudyDesc')
     },
     {
-      title: "Monthly Prayer Night",
-      date: "First Friday of each month",
+      title: t('events.monthlyPrayer'),
+      date: t('events.firstFriday'),
       time: "7:00 PM - 9:00 PM",
-      location: "Prayer Room",
-      description: "Corporate prayer gathering for church needs, community, and nations."
+      location: t('events.prayerRoom'),
+      description: t('events.prayerNightDesc')
     },
     {
-      title: "Community Outreach",
+      title: t('events.communityOutreach'),
       date: "June 15, 2024",
       time: "9:00 AM - 2:00 PM",
-      location: "Local Community Center",
-      description: "Serving our community through practical help and sharing God's love."
+      location: t('events.communityCenter'),
+      description: t('events.outreachDesc')
     },
     {
-      title: "Summer Conference",
+      title: t('events.summerConference'),
       date: "July 20-22, 2024",
-      time: "All Day",
-      location: "Church Campus",
-      description: "Annual summer conference with guest speakers, worship, and fellowship."
+      time: t('events.allDay'),
+      location: t('events.churchCampus'),
+      description: t('events.conferenceDesc')
     },
     {
-      title: "Youth Camp",
+      title: t('events.youthCamp'),
       date: "August 5-9, 2024",
-      time: "All Day",
-      location: "Retreat Center",
-      description: "Summer camp for youth with activities, teachings, and spiritual growth."
+      time: t('events.allDay'),
+      location: t('events.retreatCenter'),
+      description: t('events.youthCampDesc')
     }
   ];
 
   return (
     <>
       <Head>
-        <title>Events | Church Name</title>
-        <meta name="description" content="Upcoming events and activities at our church" />
+        <title>{t('events.title')} | Shiloh Church</title>
+        <meta name="description" content={t('events.metaDescription')} />
       </Head>
 
       {/* Hero Section */}
       <section className="relative h-64 flex items-center justify-center bg-gray-100">
         <div className="text-center px-4">
-          <h1 className="text-4xl font-bold mb-4 text-gray-900">CHURCH EVENTS</h1>
-          <p className="text-xl text-gray-700">Join us for worship, fellowship, and service</p>
+          <h1 className="text-4xl font-bold mb-4 text-gray-900">{t('events.heroTitle')}</h1>
+          <p className="text-xl text-gray-700">{t('events.heroSubtitle')}</p>
         </div>
       </section>
 
@@ -66,9 +69,9 @@ export default function Events() {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Upcoming Events</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">{t('events.upcomingEvents')}</h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Check out our calendar of events and mark your dates to join us!
+              {t('events.upcomingDescription')}
             </p>
           </div>
 
@@ -100,7 +103,7 @@ export default function Events() {
                 
                 <div className="mt-4 flex justify-end">
                   <button className="bg-gray-800 hover:bg-gray-900 text-white font-medium py-2 px-4 rounded-lg transition-colors">
-                    Add to Calendar
+                    {t('events.addToCalendar')}
                   </button>
                 </div>
               </div>
@@ -113,37 +116,37 @@ export default function Events() {
       <section className="py-16 bg-gray-100">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Regular Gatherings</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">{t('events.regularGatherings')}</h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Our weekly schedule of services and activities
+              {t('events.regularDescription')}
             </p>
           </div>
 
           <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Sunday Services</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">{t('events.sundayServices')}</h3>
               <ul className="space-y-2">
                 <li className="flex justify-between">
-                  <span>Worship Service</span>
+                  <span>{t('events.worshipService')}</span>
                   <span className="text-church-orange font-medium">10:00 AM</span>
                 </li>
                 <li className="flex justify-between">
-                  <span>Sunday School</span>
+                  <span>{t('events.sundaySchool')}</span>
                   <span className="text-church-orange font-medium">9:00 AM</span>
                 </li>
               </ul>
             </div>
 
             <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Weekday Activities</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">{t('events.weekdayActivities')}</h3>
               <ul className="space-y-2">
                 <li className="flex justify-between">
-                  <span>Bible Study</span>
-                  <span className="text-church-orange font-medium">Wed 7:00 PM</span>
+                  <span>{t('events.bibleStudy')}</span>
+                  <span className="text-church-orange font-medium">{t('events.wed7pm')}</span>
                 </li>
                 <li className="flex justify-between">
-                  <span>Prayer Meeting</span>
-                  <span className="text-church-orange font-medium">Fri 6:30 PM</span>
+                  <span>{t('events.prayerMeeting')}</span>
+                  <span className="text-church-orange font-medium">{t('events.fri630pm')}</span>
                 </li>
               </ul>
             </div>

@@ -1,58 +1,61 @@
 import Head from 'next/head';
 
+import { useTranslation } from '@/hooks/useTranslation';
 
 export default function Ministries() {
+  const { t } = useTranslation();
+
   const ministries = [
     {
-      title: "Children's Ministry",
-      description: "Engaging programs for children to learn about God's love through stories, games, and activities.",
-      schedule: "Sundays during service",
-      contact: "children@churchname.org"
+      title: t('ministries.childrensMinistry'),
+      description: t('ministries.childrensDesc'),
+      schedule: t('ministries.sundaysDuringService'),
+      contact: "children@shilohchurch.org"
     },
     {
-      title: "Youth Group",
-      description: "A dynamic community for teenagers to grow in faith, build relationships, and serve others.",
-      schedule: "Fridays 7:00 PM",
-      contact: "youth@churchname.org"
+      title: t('ministries.youthGroup'),
+      description: t('ministries.youthGroupDesc'),
+      schedule: t('ministries.fridays7pm'),
+      contact: "youth@shilohchurch.org"
     },
     {
-      title: "Men's Fellowship",
-      description: "Brothers in Christ gathering for Bible study, accountability, and mutual encouragement.",
-      schedule: "1st Saturday of each month",
-      contact: "mens@churchname.org"
+      title: t('ministries.mensFellowship'),
+      description: t('ministries.mensFellowshipDesc'),
+      schedule: t('ministries.firstSaturday'),
+      contact: "mens@shilohchurch.org"
     },
     {
-      title: "Women's Circle",
-      description: "Sisters in faith meeting for prayer, study, and supporting one another through life's journeys.",
-      schedule: "2nd Saturday of each month",
-      contact: "womens@churchname.org"
+      title: t('ministries.womensCircle'),
+      description: t('ministries.womensCircleDesc'),
+      schedule: t('ministries.secondSaturday'),
+      contact: "womens@shilohchurch.org"
     },
     {
-      title: "Prayer Warriors",
-      description: "Dedicated intercessors committed to praying for the church, community, and global needs.",
-      schedule: "Wednesdays 6:30 PM",
-      contact: "prayer@churchname.org"
+      title: t('ministries.prayerWarriors'),
+      description: t('ministries.prayerWarriorsDesc'),
+      schedule: t('ministries.wednesdays630pm'),
+      contact: "prayer@shilohchurch.org"
     },
     {
-      title: "Outreach Team",
-      description: "Serving our local community through practical help and sharing God's love in action.",
-      schedule: "Monthly service projects",
-      contact: "outreach@churchname.org"
+      title: t('ministries.outreachTeam'),
+      description: t('ministries.outreachTeamDesc'),
+      schedule: t('ministries.monthlyProjects'),
+      contact: "outreach@shilohchurch.org"
     }
   ];
 
   return (
     <>
       <Head>
-        <title>Ministries | Church of Shiloh</title>
-        <meta name="description" content="Explore our church ministries and find where you can serve" />
+        <title>{t('ministries.title')} | Shiloh Church</title>
+        <meta name="description" content={t('ministries.metaDescription')} />
       </Head>
 
       {/* Hero Section */}
       <section className="relative h-64 flex items-center justify-center bg-gray-100">
         <div className="text-center px-4">
-          <h1 className="text-4xl font-bold mb-4 text-gray-900">CHURCH MINISTRIES</h1>
-          <p className="text-xl text-gray-700">Find your place to serve and grow</p>
+          <h1 className="text-4xl font-bold mb-4 text-gray-900">{t('ministries.heroTitle')}</h1>
+          <p className="text-xl text-gray-700">{t('ministries.heroSubtitle')}</p>
         </div>
       </section>
 
@@ -60,9 +63,9 @@ export default function Ministries() {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Ministries</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">{t('ministries.ourMinistries')}</h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              We offer various ministries to help you connect, grow, and serve within our church community.
+              {t('ministries.ourMinistriesDesc')}
             </p>
           </div>
 
@@ -92,7 +95,7 @@ export default function Ministries() {
                 </div>
                 
                 <button className="mt-4 bg-church-orange hover:bg-church-orange-light text-white font-medium py-2 px-4 rounded-lg transition-colors w-full">
-                  Learn More
+                  {t('common.learnMore')}
                 </button>
               </div>
             ))}
@@ -103,12 +106,12 @@ export default function Ministries() {
       {/* Call to Action */}
       <section className="py-16 bg-gray-100">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-6 text-gray-900">Want to Get Involved?</h2>
+          <h2 className="text-3xl font-bold mb-6 text-gray-900">{t('ministries.getInvolvedTitle')}</h2>
           <p className="text-xl text-gray-700 mb-8 max-w-2xl mx-auto">
-            We would love to help you find the perfect ministry where you can use your gifts and grow in faith.
+            {t('ministries.getInvolvedDesc')}
           </p>
           <button className="bg-church-orange hover:bg-church-orange-light text-white font-bold py-3 px-8 rounded-lg transition-colors">
-            Contact Us
+            {t('common.contactUs')}
           </button>
         </div>
       </section>

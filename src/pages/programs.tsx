@@ -2,106 +2,108 @@ import Head from 'next/head';
 
 import { useState } from 'react';
 import Link from 'next/link';
+import { useTranslation } from '@/hooks/useTranslation';
 
 export default function Programs() {
+  const { t } = useTranslation();
   const [activeDay, setActiveDay] = useState('all');
 
   const gatherings = [
     {
-      day: 'Monday',
+      day: t('days.monday'),
       events: [
         {
           time: '10:00 AM – 4:30 PM CST',
-          title: 'Counseling and Prayer',
-          description: 'Brother Fikire Getachew is available for counseling and prayer.',
+          title: t('programs.counselingPrayer'),
+          description: t('programs.counselingDesc'),
           contact: '504-344-9479',
-          location: 'Church Office'
+          location: t('programs.churchOffice')
         }
       ]
     },
     {
-      day: 'Tuesday',
+      day: t('days.tuesday'),
       events: [
         {
           time: '10:00 AM – 4:30 PM CST',
-          title: 'Counseling and Prayer',
-          description: 'Brother Fikire Getachew is available for counseling and prayer.',
+          title: t('programs.counselingPrayer'),
+          description: t('programs.counselingDesc'),
           contact: '504-344-9479',
-          location: 'Church Office'
+          location: t('programs.churchOffice')
         },
         {
           time: '9:00 PM - 10:00 PM CST',
-          title: 'Evening Prayer',
-          description: 'Join us for our weekly evening prayer session.',
-          location: 'Main Sanctuary'
+          title: t('programs.eveningPrayer'),
+          description: t('programs.eveningPrayerDesc'),
+          location: t('programs.mainSanctuary')
         }
       ]
     },
     {
-      day: 'Wednesday',
+      day: t('days.wednesday'),
       events: [
         {
           time: '7:00 AM - 1:00 PM CST',
-          title: 'Chain Prayer and Fasting',
-          description: 'Participate in our chain prayer and fasting throughout the morning.',
-          location: 'Main Sanctuary'
+          title: t('programs.chainPrayer'),
+          description: t('programs.chainPrayerDesc'),
+          location: t('programs.mainSanctuary')
         },
         {
           time: '7:00 PM - 8:00 PM CST',
-          title: 'Bible Marathon',
-          description: 'Covering the books of Genesis to Revelation.',
-          location: 'Main Sanctuary'
+          title: t('programs.bibleMarathon'),
+          description: t('programs.bibleMarathonDesc'),
+          location: t('programs.mainSanctuary')
         }
       ]
     },
     {
-      day: 'Thursday',
+      day: t('days.thursday'),
       events: [
         {
           time: '7:30 PM - 9:30 PM CST',
-          title: 'Bible Study',
-          description: 'Join us for Bible study at two locations.',
-          location: 'Metairie and Westbank'
+          title: t('programs.bibleStudy'),
+          description: t('programs.bibleStudyDesc'),
+          location: t('programs.twoLocations')
         }
       ]
     },
     {
-      day: 'Sunday',
+      day: t('days.sunday'),
       events: [
         {
           time: '9:00 AM - 10:00 AM CST',
-          title: 'Morning Prayer',
-          description: 'Preparatory prayer time before service.',
-          location: 'Main Sanctuary'
+          title: t('programs.morningPrayer'),
+          description: t('programs.morningPrayerDesc'),
+          location: t('programs.mainSanctuary')
         },
         {
           time: '10:00 AM - 12:00 PM CST',
-          title: 'Worship Service',
-          description: 'Worship service and preaching, conducted in Amharic, Tigrigna, and Afan Oromo.',
-          location: 'Main Sanctuary'
+          title: t('programs.worshipService'),
+          description: t('programs.worshipServiceDesc'),
+          location: t('programs.mainSanctuary')
         },
         {
           time: '10:30 AM - 12:00 PM CST',
-          title: "Children&apos;s Sunday School",
-          description: 'Sunday school service for children.',
-          location: 'Children&apos;s Wing'
+          title: t('programs.childrenSundaySchool'),
+          description: t('programs.childrenSundaySchoolDesc'),
+          location: t('programs.childrensWing')
         }
       ]
     },
     {
-      day: 'Special',
+      day: t('days.special'),
       events: [
         {
-          time: 'First Sunday of each month: 10:00 AM - 1:30 PM CST',
-          title: 'Fasting, Prayer, and Fellowship',
-          description: 'Monthly day of fasting, prayer, and fellowship.',
-          location: 'Main Sanctuary'
+          time: t('programs.firstSundayTime'),
+          title: t('programs.fastingPrayer'),
+          description: t('programs.fastingPrayerDesc'),
+          location: t('programs.mainSanctuary')
         },
         {
-          time: 'Biannual',
-          title: 'Annual Conferences',
-          description: 'We hold biannual conferences, one around Christmas and another in the summer.',
-          location: 'Main Sanctuary'
+          time: t('programs.biannual'),
+          title: t('programs.annualConferences'),
+          description: t('programs.annualConferencesDesc'),
+          location: t('programs.mainSanctuary')
         }
       ]
     }
@@ -111,20 +113,20 @@ export default function Programs() {
 
   const filteredGatherings = activeDay === 'all' 
     ? gatherings 
-    : gatherings.filter(g => g.day.toLowerCase() === activeDay);
+    : gatherings.filter(g => g.day.toLowerCase() === t(`days.${activeDay}`).toLowerCase());
 
   return (
     <>
       <Head>
-        <title>Services & Gatherings | Church Name</title>
-        <meta name="description" content="Join us for spiritual activities and fellowship" />
+        <title>{t('programs.title')} | Shiloh Church</title>
+        <meta name="description" content={t('programs.metaDescription')} />
       </Head>
 
       {/* Hero Section */}
       <section className="relative h-64 flex items-center justify-center bg-gray-100">
         <div className="text-center px-4">
-          <h1 className="text-4xl font-bold mb-4 text-gray-900">REGULAR GATHERINGS</h1>
-          <p className="text-xl text-gray-700">Please join us for these spiritual activities and fellowship!</p>
+          <h1 className="text-4xl font-bold mb-4 text-gray-900">{t('programs.heroTitle')}</h1>
+          <p className="text-xl text-gray-700">{t('programs.heroSubtitle')}</p>
         </div>
       </section>
 
@@ -142,7 +144,7 @@ export default function Programs() {
                     : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
                 }`}
               >
-                {day === 'all' ? 'All Days' : day.charAt(0).toUpperCase() + day.slice(1)}
+                {day === 'all' ? t('programs.allDays') : t(`days.${day}`)}
               </button>
             ))}
           </div>
@@ -203,23 +205,23 @@ export default function Programs() {
 
           {/* Additional Information */}
           <div className="max-w-4xl mx-auto mt-12 bg-church-orange-light/10 rounded-xl p-6 border border-church-orange-light">
-            <h3 className="text-xl font-bold text-gray-900 mb-4">Important Notes</h3>
+            <h3 className="text-xl font-bold text-gray-900 mb-4">{t('programs.importantNotes')}</h3>
             <ul className="text-gray-700 space-y-2">
               <li className="flex items-start">
                 <span className="text-church-orange font-bold mr-2 mt-1">•</span>
-                <span>All services are open to everyone. Visitors are always welcome!</span>
+                <span>{t('programs.note1')}</span>
               </li>
               <li className="flex items-start">
                 <span className="text-church-orange font-bold mr-2 mt-1">•</span>
-                <span>For directions to our Metairie and Westbank locations, please contact the church office.</span>
+                <span>{t('programs.note2')}</span>
               </li>
               <li className="flex items-start">
                 <span className="text-church-orange font-bold mr-2 mt-1">•</span>
-                <span>Children&apos;s Sunday School runs concurrently with our main worship service.</span>
+                <span>{t('programs.note3')}</span>
               </li>
               <li className="flex items-start">
                 <span className="text-church-orange font-bold mr-2 mt-1">•</span>
-                <span>For more information about our biannual conferences, please check our events page or contact church leadership.</span>
+                <span>{t('programs.note4')}</span>
               </li>
             </ul>
           </div>
@@ -229,17 +231,17 @@ export default function Programs() {
       {/* Call to Action Section */}
       <section className="py-16 bg-gray-100">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-6 text-gray-900">Join Us This Week</h2>
+          <h2 className="text-3xl font-bold mb-6 text-gray-900">{t('programs.joinUs')}</h2>
           <p className="text-xl text-gray-700 mb-8 max-w-3xl mx-auto">
-            We&apos;d love to have you join us for worship, prayer, and fellowship. Experience the warmth of our church community.
+            {t('programs.joinUsDesc')}
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <button className="bg-church-orange hover:bg-church-orange-light text-white font-bold py-3 px-8 rounded-lg transition-colors">
-              Get Directions
+              {t('common.getDirections')}
             </button>
             <Link href="/contact" passHref>
               <button className="bg-gray-800 hover:bg-gray-900 text-white font-bold py-3 px-8 rounded-lg transition-colors">
-                Contact Us
+                {t('common.contactUs')}
               </button>
             </Link>
           </div>
