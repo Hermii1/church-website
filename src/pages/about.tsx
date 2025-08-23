@@ -31,7 +31,7 @@ export default function About() {
   ];
 
   return (
-    <Layout>
+    <>
       <Head>
         <title>About Us | Church Name</title>
         <meta name="description" content="Learn about our origin, beliefs, vision, and mission" />
@@ -243,6 +243,6 @@ export default function About() {
           </div>
         </div>
       </section>
-    </Layout>
+    </>
   );
 }

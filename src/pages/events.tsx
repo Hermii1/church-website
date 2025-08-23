@@ -48,7 +48,7 @@ export default function Events() {
   ];
 
   return (
-    <Layout>
+    <>
       <Head>
         <title>Events | Church Name</title>
         <meta name="description" content="Upcoming events and activities at our church" />
@@ -150,6 +150,6 @@ export default function Events() {
           </div>
         </div>
       </section>
-    </Layout>
+    </>
   );
 }

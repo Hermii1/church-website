@@ -114,7 +114,7 @@ export default function Programs() {
     : gatherings.filter(g => g.day.toLowerCase() === activeDay);
 
   return (
-    <Layout>
+    <>
       <Head>
         <title>Services & Gatherings | Church Name</title>
         <meta name="description" content="Join us for spiritual activities and fellowship" />
@@ -245,6 +245,6 @@ export default function Programs() {
           </div>
         </div>
       </section>
-    </Layout>
+    </>
   );
 }

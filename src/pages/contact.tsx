@@ -3,7 +3,7 @@ import Layout from '@/components/layout/Layout';
 
 export default function Contact() {
   return (
-    <Layout>
+    <>
       <Head>
         <title>Contact Us | Church Name</title>
         <meta name="description" content="Get in touch with Church Name" />
@@ -40,6 +40,6 @@ export default function Contact() {
           </div>
         </div>
       </div>
-    </Layout>
+    </>
   );
 }

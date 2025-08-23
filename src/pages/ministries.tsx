@@ -42,7 +42,7 @@ export default function Ministries() {
   ];
 
   return (
-    <Layout>
+    <>
       <Head>
         <title>Ministries | Church of Shiloh</title>
         <meta name="description" content="Explore our church ministries and find where you can serve" />
@@ -112,6 +112,6 @@ export default function Ministries() {
           </button>
         </div>
       </section>
-    </Layout>
+    </>
   );
 }
