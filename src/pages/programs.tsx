@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import Layout from '@/components/layout/Layout';
+
 import { useState } from 'react';
 import Link from 'next/link';
 

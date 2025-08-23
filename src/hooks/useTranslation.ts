@@ -19,18 +19,17 @@ export function useTranslation() {
   const t = (key: string, fallback?: string): string => {
     // Split the key by dots to navigate the nested object
     const keys = key.split('.')
-    let value: any = translations[language]
-    
-    for (const k of keys) {
-      if (value && typeof value === 'object' && k in value) {
-        value = value[k]
-      } else {
-        // Return fallback or key if translation not found
-        return fallback || key
-      }
-    }
-    
-    return value || fallback || key
+let value: unknown = translations[language]
+
+for (const k of keys) {
+  if (value && typeof value === 'object' && k in value) {
+    value = (value as Record<string, unknown>)[k]
+  } else {
+    return fallback || key
+  }
+}
+
+return typeof value === 'string' ? value : fallback || key
   }
 
   return { t, language }

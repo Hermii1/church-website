@@ -3,6 +3,8 @@
 import { useLanguage } from '@/Context/LanguageContext'
 import { useState, useRef, useEffect } from 'react'
 
+type LanguageCode = 'en' | 'am' | 'ti' | 'om';
+
 export default function LanguageSelector() {
   const { language, setLanguage } = useLanguage()
   const [isOpen, setIsOpen] = useState(false)
@@ -29,9 +31,9 @@ export default function LanguageSelector() {
     }
   }, [])
 
-  const handleLanguageChange = (langCode: string) => {
-    setLanguage(langCode as any)
-    setIsOpen(false)
+  const handleLanguageChange = (code: LanguageCode) => {
+    setLanguage(code);
+    setIsOpen(false);
   }
 
   const currentLanguage = languages.find(lang => lang.code === language)
@@ -66,7 +68,7 @@ export default function LanguageSelector() {
             {languages.map((lang) => (
               <button
                 key={lang.code}
-                onClick={() => handleLanguageChange(lang.code)}
+                onClick={() => handleLanguageChange(lang.code as LanguageCode)}
                 className={`block w-full text-left px-4 py-2 text-sm ${
                   language === lang.code
                     ? 'bg-church-orange text-white'
