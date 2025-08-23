@@ -1,15 +1,18 @@
 import Head from 'next/head';
-
+import Layout from '@/components/layout/Layout';
 import Hero from '@/components/home/Hero';
 import DailyQuote from '@/components/home/DailyQuote';
 import Announcements from '@/components/home/Announcements';
+import { useTranslation } from '@/hooks/useTranslation';
 
 export default function Home() {
+  const { t } = useTranslation();
+
   return (
-   <>
+    <>
       <Head>
-        <title>Church of Shiloh  | Home</title>
-        <meta name="description" content="Building stronger connections through worship" />
+        <title>Church Name | {t('navigation.home')}</title>
+        <meta name="description" content={t('home.welcome')} />
       </Head>
 
       <Hero />

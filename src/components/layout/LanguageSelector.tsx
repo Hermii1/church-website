@@ -1,34 +1,88 @@
-// src/components/LanguageSelector.tsx
 'use client'
 
-import { useState } from 'react'
+import { useLanguage } from '@/Context/LanguageContext'
+import { useState, useRef, useEffect } from 'react'
 
 export default function LanguageSelector() {
-  const [currentLanguage, setCurrentLanguage] = useState('en')
-  
+  const { language, setLanguage } = useLanguage()
+  const [isOpen, setIsOpen] = useState(false)
+  const dropdownRef = useRef<HTMLDivElement>(null)
+
   const languages = [
-    { code: 'en', name: 'English' },
-    { code: 'am', name: 'አማርኛ' },
-    { code: 'ti', name: 'ትግሪኛ' },
-    { code: 'om', name: 'Afan Oromo' }
+    { code: 'en', name: 'English', native: 'English' },
+    { code: 'am', name: 'Amharic', native: 'አማርኛ' },
+    { code: 'ti', name: 'Tigrinya', native: 'ትግሪኛ' },
+    { code: 'om', name: 'Oromo', native: 'Afan Oromo' }
   ]
 
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setIsOpen(false)
+      }
+    }
+
+    document.addEventListener('mousedown', handleClickOutside)
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside)
+    }
+  }, [])
+
+  const handleLanguageChange = (langCode: string) => {
+    setLanguage(langCode as any)
+    setIsOpen(false)
+  }
+
+  const currentLanguage = languages.find(lang => lang.code === language)
+
   return (
-    <div className="relative">
-      <select 
-        value={currentLanguage}
-        onChange={(e) => setCurrentLanguage(e.target.value)}
-        className="bg-primary-800 text-white border border-primary-700 rounded-md py-1 px-3 appearance-none focus:outline-none focus:ring-2 focus:ring-secondary-500"
+    <div className="relative" ref={dropdownRef}>
+      <button 
+        className="flex items-center space-x-1 px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-church-orange-light transition-colors border border-gray-600 hover:border-church-orange-light"
+        onClick={() => setIsOpen(!isOpen)}
+        aria-expanded={isOpen}
+        aria-haspopup="true"
       >
-        {languages.map(lang => (
-          <option key={lang.code} value={lang.code}>{lang.name}</option>
-        ))}
-      </select>
-      <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-white">
-        <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-          <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+        <span className="hidden sm:inline">
+          {currentLanguage?.native}
+        </span>
+        <span className="sm:hidden">
+          {currentLanguage?.code.toUpperCase()}
+        </span>
+        <svg 
+          xmlns="http://www.w3.org/2000/svg" 
+          className={`h-4 w-4 transition-transform ${isOpen ? 'rotate-180' : ''}`} 
+          viewBox="0 0 20 20" 
+          fill="currentColor"
+        >
+          <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
         </svg>
-      </div>
+      </button>
+
+      {isOpen && (
+        <div className="absolute right-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 z-50">
+          <div className="py-1" role="menu" aria-orientation="vertical">
+            {languages.map((lang) => (
+              <button
+                key={lang.code}
+                onClick={() => handleLanguageChange(lang.code)}
+                className={`block w-full text-left px-4 py-2 text-sm ${
+                  language === lang.code
+                    ? 'bg-church-orange text-white'
+                    : 'text-gray-700 hover:bg-gray-100'
+                }`}
+                role="menuitem"
+              >
+                <div className="flex justify-between items-center">
+                  <span className="font-medium">{lang.native}</span>
+                  <span className="text-xs opacity-70">{lang.name}</span>
+                </div>
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
     </div>
   )
 }

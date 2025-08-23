@@ -1,0 +1,58 @@
+{
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "events": "Events",
+    "leadership": "Leadership",
+    "ministries": "Ministries",
+    "programs": "Programs",
+    "contact": "Contact"
+  },
+  "home": {
+    "welcome": "Building stronger connections through worship",
+    "subtitle": "Experience unity and faith as we come together in worship strengthening our bond with God and one another in love and grace.",
+    "joinButton": "Join Church",
+    "dailyQuote": "Daily Inspiration",
+    "announcements": "Announcements",
+    "counselingHours": "Counseling and Prayer Hours",
+    "counselingDescription": "Mondays and Tuesdays, 10:00 am-4:00 pm. Brother Fikire Getachew is available for counseling and prayer.",
+    "contactPhone": "Contact Phone"
+  },
+  "footer": {
+    "churchName": "Church Name",
+    "churchDescription": "Building stronger connections through worship and faith.",
+    "quickLinks": "Quick Links",
+    "serviceTimes": "Service Times",
+    "sundayWorship": "Sunday Worship",
+    "bibleStudy": "Bible Study",
+    "prayerMeeting": "Prayer Meeting",
+    "rightsReserved": "All rights reserved"
+  },
+  
+  "common": {
+    "getDirections": "Get Directions",
+    "contactUs": "Contact Us",
+    "learnMore": "Learn More",
+    "time": "Time",
+    "location": "Location",
+    "contact": "Contact",
+    "viewDetails": "View Details",
+    "ongoing": "Ongoing"
+  },
+  "services": {
+    "bibleStudyTitle": "Weekly Bible Study",
+    "bibleStudyDesc": "Join us every Wednesday at 6:30 PM for our community Bible study session.",
+    "sundayServiceTitle": "Sunday Service",
+    "sundayServiceDesc": "Our main worship service takes place every Sunday at 10:00 AM. All are welcome!",
+    "everyWednesday": "Every Wednesday",
+    "everySunday": "Every Sunday"
+  },
+  "announcements": {
+    "bibleStudyTitle": "Weekly Bible Study",
+    "bibleStudyDescription": "Join us every Wednesday at 6:30 PM for our community Bible study session.",
+    "sundayServiceTitle": "Sunday Service",
+    "sundayServiceDescription": "Our main worship service takes place every Sunday at 10:00 AM. All are welcome!",
+    "everyWednesday": "Every Wednesday",
+    "everySunday": "Every Sunday"
+  }
+}

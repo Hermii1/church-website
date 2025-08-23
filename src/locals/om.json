@@ -1,0 +1,49 @@
+{
+  "navigation": {
+    "home": "Mana",
+    "about": "Waa'ee Keenya",
+    "events": "Hawwannoo",
+    "leadership": "Hojii Hogganaa",
+    "ministries": "Tajajiloota",
+    "programs": "Porogaramoota",
+    "contact": "Nu Qunnamuu"
+  },
+  "home": {
+    "welcome": "Qindoomina cimaa qabsiisuu irratti qunnamtii saalaa",
+    "subtitle": "Tokkummaa fi amantii qunnamtii saalaa keessatti walitti dhufuun qindoomina keenya Waaqayyoofi kan nu biraa jiran waliin jaalalaafi kadhannaa keessatti cimsiisuu.",
+    "joinButton": "Mannicha Keessatti Makamu",
+    "dailyQuote": "Gorsa Guyyaa Guyyaa",
+    "announcements": "Beellamnamoota",
+    "counselingHours": "Sa'aatota Gorsaa fi Kadhaa",
+    "counselingDescription": "Dilbatafi Kibxata, 10:00 WD - 4:00 WB. Obbo Fikire Getachew gorsaa fi kadhaaf argama.",
+    "contactPhone": "Lakkoofsa Bilbila"
+  },
+  "footer": {
+    "churchName": "Maqaa Mannichaa",
+    "churchDescription": "Qindoomina cimaa qunnamtii saalaa fi amantii irratti qabsiisuu.",
+    "quickLinks": "Faana Linkii",
+    "serviceTimes": "Yeroo Tajaajilaa",
+    "sundayWorship": "Qunnamtii Dilbataa",
+    "bibleStudy": "Qo'annoo Kitaabaa Qulqulluu",
+    "prayerMeeting": "Walii Galtee Kadhaa",
+    "rightsReserved": "Mirga hundi kan ofii dha"
+  },
+  "common": {
+    "getDirections": "Qajeelfamota Argachuu",
+    "contactUs": "Nu Qunnamuu",
+    "learnMore": "Dabalataan Baradhu",
+    "time": "Yeroo",
+    "location": "Bakka",
+    "contact": "Qunnamuu",
+    "viewDetails": "Gad-fageenya Ilaaluu",
+    "ongoing": "Ittisu"
+  },
+  "announcements": {
+    "bibleStudyTitle": "Qo'annoo Kitaabaa Torbanii",
+    "bibleStudyDescription": "Kibxata 6:30 WB akka walii galaa keenya qo'annoo Kitaabaa Qulqulluu nu makamaa.",
+    "sundayServiceTitle": "Tajaajilaa Dilbataa",
+    "sundayServiceDescription": "Tajaajilaa keenya guddaa qunnamtii saalaa Dilbata 10:00 WD irratti geggeeffama. Hunduu ni eebbifama!",
+    "everyWednesday": "Kibxata",
+    "everySunday": "Dilbata"
+  }
+}

@@ -1,34 +1,36 @@
 import { useState } from 'react';
+import { useTranslation } from '@/hooks/useTranslation';
 
 export default function Announcements() {
+  const { t } = useTranslation();
   const [announcements] = useState([
     {
       id: 1,
-      title: "Counseling and Prayer Hours",
-      description: "Mondays and Tuesdays, 10:00 am-4:00 pm. Brother Fikire Getachew is available for counseling and prayer.",
+      title: t('home.counselingHours'),
+      description: t('home.counselingDescription'),
       contact: "504-344-9479",
-      date: "Ongoing"
+      date: t('common.ongoing')
     },
     {
       id: 2,
-      title: "Weekly Bible Study",
-      description: "Join us every Wednesday at 6:30 PM for our community Bible study session.",
+      title: t('announcements.bibleStudyTitle'),
+      description: t('announcements.bibleStudyDescription'),
       contact: "church@example.com",
-      date: "Every Wednesday"
+      date: t('announcements.everyWednesday')
     },
     {
       id: 3,
-      title: "Sunday Service",
-      description: "Our main worship service takes place every Sunday at 10:00 AM. All are welcome!",
+      title: t('announcements.sundayServiceTitle'),
+      description: t('announcements.sundayServiceDescription'),
       contact: "",
-      date: "Every Sunday"
+      date: t('announcements.everySunday')
     }
   ]);
 
   return (
     <section className="py-16 bg-church-black">
       <div className="container mx-auto px-4">
-        <h2 className="section-heading text-white">Announcements</h2>
+        <h2 className="section-heading text-white">{t('home.announcements')}</h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {announcements.map((announcement) => (
@@ -44,7 +46,7 @@ export default function Announcements() {
                 <div className="mt-auto">
                   {announcement.contact && (
                     <div className="mb-3">
-                      <p className="text-sm text-gray-400">Contact:</p>
+                      <p className="text-sm text-gray-400">{t('common.contact')}:</p>
                       <a 
                         href={`tel:${announcement.contact}`}
                         className="text-church-orange-light hover:text-church-orange transition-colors font-medium"
@@ -57,7 +59,7 @@ export default function Announcements() {
                   <div className="flex justify-between items-center pt-3 border-t border-gray-700">
                     <span className="text-sm text-gray-400">{announcement.date}</span>
                     <button className="text-church-orange-light hover:text-church-orange text-sm font-medium transition-colors">
-                      View Details
+                      {t('common.viewDetails')}
                     </button>
                   </div>
                 </div>
@@ -66,11 +68,11 @@ export default function Announcements() {
           ))}
         </div>
 
-        {/* Special highlighted announcement as requested */}
+        {/* Special highlighted announcement */}
         <div className="mt-12 max-w-4xl mx-auto bg-gray-800 p-6 rounded-xl border-l-4 border-church-orange">
-          <h3 className="text-xl font-bold text-white mb-3">Counseling & Prayer Hours</h3>
+          <h3 className="text-xl font-bold text-white mb-3">{t('home.counselingHours')}</h3>
           <p className="text-gray-300 mb-4">
-            Mondays and Tuesdays, 10:00 am-4:00 pm. Brother Fikire Getachew is available for counseling and prayer.
+            {t('home.counselingDescription')}
           </p>
           <div className="flex items-center">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-church-orange-light mr-2" viewBox="0 0 20 20" fill="currentColor">

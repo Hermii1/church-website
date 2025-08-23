@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
+import { useTranslation } from '@/hooks/useTranslation';
+import Link from 'next/link';
 
 const heroImages = [
   '/images/hero/hero1.jpg',
@@ -9,6 +11,7 @@ const heroImages = [
 
 export default function Hero() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const { t } = useTranslation();
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -46,14 +49,16 @@ export default function Hero() {
       {/* Content */}
       <div className="relative z-10 text-center px-4 max-w-4xl">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
-          Building stronger connections through worship
+          {t('home.welcome')}
         </h1>
         <p className="text-lg md:text-xl mb-8 text-gray-200">
-          Experience unity and faith as we come together in worship strengthening our bond with God and one another in love and grace.
+          {t('home.subtitle')}
         </p>
-        <button className="btn-primary">
-          Join Church
-        </button>
+        <Link href="/contact">
+          <button className="btn-primary">
+            {t('home.joinButton')}
+          </button>
+        </Link>
       </div>
     </section>
   );

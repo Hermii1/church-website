@@ -1,18 +1,20 @@
-import Link from 'next/link';
-
-import { useState } from 'react';
+import Link from 'next/link'
+import { useState } from 'react'
+import LanguageSelector from '../layout/LanguageSelector'
+import { useTranslation } from '@/hooks/useTranslation'
 
 export default function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const { t } = useTranslation()
 
   const navItems = [
-    { name: 'Home', path: '/' },
-    { name: 'About', path: '/about' },
-    { name: 'Events', path: '/events' },
-    { name: 'Ministries', path: '/ministries' },
-    { name: 'Programs', path: '/programs' },
-    { name: 'Contact', path: '/contact' },
-  ];
+    { name: t('navigation.home'), path: '/' },
+    { name: t('navigation.about'), path: '/about' },
+    { name: t('navigation.events'), path: '/events' },
+    { name: t('navigation.ministries'), path: '/ministries' },
+    { name: t('navigation.programs'), path: '/programs' },
+    { name: t('navigation.contact'), path: '/contact' },
+  ]
 
   return (
     <header className="bg-church-black text-white py-4 border-b border-gray-800">
@@ -23,20 +25,23 @@ export default function Header() {
         </Link>
         
         {/* Desktop Navigation */}
-        <nav className="hidden md:block">
-          <ul className="flex space-x-8">
-            {navItems.map((item) => (
-              <li key={item.name}>
-                <Link 
-                  href={item.path} 
-                  className="text-gray-300 hover:text-church-orange-light transition-colors font-medium"
-                >
-                  {item.name}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </nav>
+        <div className="hidden md:flex items-center space-x-6">
+          <nav>
+            <ul className="flex space-x-8">
+              {navItems.map((item, index) => (
+                <li key={index}>
+                  <Link 
+                    href={item.path} 
+                    className="text-gray-300 hover:text-church-orange-light transition-colors font-medium"
+                  >
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+          <LanguageSelector />
+        </div>
         
         {/* Mobile Menu Button */}
         <button 
@@ -52,21 +57,26 @@ export default function Header() {
       {/* Mobile Navigation */}
       {isMenuOpen && (
         <nav className="md:hidden bg-gray-900 mt-2 py-4">
-          <ul className="container mx-auto px-4 space-y-3">
-            {navItems.map((item) => (
-              <li key={item.name}>
-                <Link 
-                  href={item.path} 
-                  className="block text-gray-300 hover:text-church-orange-light transition-colors font-medium py-2"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {item.name}
-                </Link>
-              </li>
-            ))}
-          </ul>
+          <div className="container mx-auto px-4">
+            <div className="mb-4">
+              <LanguageSelector />
+            </div>
+            <ul className="space-y-3">
+              {navItems.map((item, index) => (
+                <li key={index}>
+                  <Link 
+                    href={item.path} 
+                    className="block text-gray-300 hover:text-church-orange-light transition-colors font-medium py-2"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
         </nav>
       )}
     </header>
-  );
+  )
 }

@@ -1,0 +1,57 @@
+{
+  "navigation": {
+    "home": "መነሻ",
+    "about": "ስለኛ",
+    "events": "ፕሮግራሞች",
+    "leadership": "ሊቀመንበር",
+    "ministries": "አገልግሎቶች",
+    "programs": "ዕቅዶች",
+    "contact": "አግኙን"
+  },
+  "home": {
+    "welcome": "በአምልኮ ጠንካራ ግንኙነቶችን መገንባት",
+    "subtitle": "እግዚአብሔርን እና እርስ በርስ በፍቅር እና በጸጋ የምናጠናክር ግንኙነት ላይ በአምልኮ አንድነትን እና እምነትን ይንቀሳቀሱ።",
+    "joinButton": "ቤተክርስቲያን ይቀላቀሉ",
+    "dailyQuote": "ዕለታዊ መነባበሪያ",
+    "announcements": "ማስታወቂያዎች",
+    "counselingHours": "የምክር እና ጸሎት ሰዓታት",
+    "counselingDescription": "ሰኞ እና ማክሰኞ፣ 10:00 ጥዋት - 4:00 ከሰዓት። ወንድም ፍቅረ ጌታቸው ለምክር እና ጸሎት ይገኛሉ።",
+    "contactPhone": "የስልክ ቁጥር"
+  },
+  "footer": {
+    "churchName": "የቤተክርስቲያን ስም",
+    "churchDescription": "በአምልኮ እና እምነት ጠንካራ ግንኙነቶችን መገንባት።",
+    "quickLinks": "ፈጣን አገናኞች",
+    "serviceTimes": "የአገልግሎት ሰዓታት",
+    "sundayWorship": "የእሁድ አምልኮ",
+    "bibleStudy": "የመጽሐፍ ቅዱስ ጥናት",
+    "prayerMeeting": "የጸሎት ስብሰባ",
+    "rightsReserved": "ሁሉም መብቶች የተጠበቁ ናቸው"
+  },
+  "common": {
+    "getDirections": "አቅጣጫዎች ያግኙ",
+    "contactUs": "ያግኙን",
+    "learnMore": "ተጨማሪ ለመረዳት",
+    "time": "ጊዜ",
+    "location": "አድራሻ",
+    "contact": "አግኙን",
+    "viewDetails": "ዝርዝሮችን ይመልከቱ",
+    "ongoing": "በመቀጠል ላይ"
+  },
+  "services": {
+    "bibleStudyTitle": "የሳምንት መጽሐፍ ቅዱስ ጥናት",
+    "bibleStudyDesc": "በእሳስ ማታ 6:30 ላይ የምናደርገውን የማህበረሰብ መጽሐፍ ቅዱስ ጥናት ይቀላቀሉ።",
+    "sundayServiceTitle": "የእሁድ አገልግሎት",
+    "sundayServiceDesc": "ዋናው የአምልኮ አገልግሎታችን በእሁድ ጥዋት 10:00 ላይ ይካሄዳል። ሁሉም ተሳትፎ ይፈቅድለታል!",
+    "everyWednesday": "በእሳስ",
+    "everySunday": "በእሁድ"
+  },
+  "announcements": {
+    "bibleStudyTitle": "የሳምንት መጽሐፍ ቅዱስ ጥናት",
+    "bibleStudyDescription": "በእሳስ ማታ 6:30 ላይ የምናደርገውን የማህበረሰብ መጽሐፍ ቅዱስ ጥናት ይቀላቀሉ።",
+    "sundayServiceTitle": "የእሁድ አገልግሎት",
+    "sundayServiceDescription": "ዋናው የአምልኮ አገልግሎታችን በእሁድ ጥዋት 10:00 ላይ ይካሄዳል። ሁሉም ተሳትፎ ይፈቅድለታል!",
+    "everyWednesday": "በእሳስ",
+    "everySunday": "በእሁድ"
+  }
+}

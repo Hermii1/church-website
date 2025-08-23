@@ -1,0 +1,49 @@
+{
+  "navigation": {
+    "home": "መእተዊ",
+    "about": "ተመሳሳሊ",
+    "events": "ፕሮግራም",
+    "leadership": "ሊቀመንበር",
+    "ministries": "ኣገልግሎታት",
+    "programs": "መደባት",
+    "contact": "ርኸቡና"
+  },
+  "home": {
+    "welcome": "ብምልክዕ ርስሓት ርክባት ምህናጽ",
+    "subtitle": "ብምልክዕ ርስሓት ሓንጎግን እምነትን ኣማዕሪግ፣ ምስ ኣምላኽን ኣብ ፍቕርን ጸጋን ንሓድሕድናን ዘጠናንዕ ርክብ ኣማዕሪግ።",
+    "joinButton": "ቤተክርስትያን ተጸንበሩ",
+    "dailyQuote": "ቀንዓዊ ማሕጸን",
+    "announcements": "ማስታወቂያታት",
+    "counselingHours": "ሰዓታት ምኽርን ጸሎትን",
+    "counselingDescription": "ሰኑይን ሰሉስን፣ 10:00 ቅ.ቀ - 4:00 ድ.ቀ። ሓው ፍቅረ ገታሕው ንምኽርን ጸሎትን ኣሎ።",
+    "contactPhone": "ቁጽሪ ተሌፎን"
+  },
+  "footer": {
+    "churchName": "ስም ቤተክርስትያን",
+    "churchDescription": "ብምልክዕ ርስሓትን እምነትን ርክባት ምህናጽ።",
+    "quickLinks": "ቅልጡፍ ሊንክታት",
+    "serviceTimes": "ሰዓታት ኣገልግሎት",
+    "sundayWorship": "ምልክዕ ሰንበት",
+    "bibleStudy": "ጥናት መጽሓፍ ቅዱስ",
+    "prayerMeeting": "ክለሳ ጸሎት",
+    "rightsReserved": "ኩሉ መሰላት ዕተወ"
+  },
+  "common": {
+    "getDirections": "ኣቅጣጫታት ረክብ",
+    "contactUs": "ርኸቡና",
+    "learnMore": "ካልእ ሓበሩ",
+    "time": "ግዜ",
+    "location": "ኣድራሻ",
+    "contact": "ርኸብ",
+    "viewDetails": "ዝርዝራት ርኣይ",
+    "ongoing": "ቀጻሊ"
+  },
+  "announcements": {
+    "bibleStudyTitle": "ሳምንታዊ ጥናት መጽሓፍ ቅዱስ",
+    "bibleStudyDescription": "ኣብ ማክሰኞ 6:30 ሰዓት ንማሕበረሰብ ጥናት መጽሓፍ ቅዱስ ተጸንበሩ።",
+    "sundayServiceTitle": "ኣገልግሎት ሰንበት",
+    "sundayServiceDescription": "ናይ ኣምልኾ ኣገልግሎትና ኣብ ሰንበት 10:00 ጥዋት ይካየድ። ኩሉም ተባሂሉና ኣሎ!",
+    "everyWednesday": "ማክሰኞ",
+    "everySunday": "ሰንበት"
+  }
+}
