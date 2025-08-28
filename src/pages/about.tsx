@@ -53,9 +53,9 @@ export default function About() {
               onClick={() => setActiveSection('origin')}
               className={`px-4 py-2 rounded-lg font-medium transition-colors ${
                 activeSection === 'origin' 
-                  ? 'bg-white text-church-orange border border-church-orange' 
+                  ? 'bg-church-orange text-white border border-church-orange' 
                   : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
-              }`}
+              }`} 
             >
               Our Origin
             </button>

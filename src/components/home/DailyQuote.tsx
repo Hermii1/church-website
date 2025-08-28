@@ -94,14 +94,15 @@ const bibleQuotes = {
 };
 
 export default function DailyQuote() {
-  const { t, language } = useTranslation(); // <-- add t here
+  const {t, language} = useTranslation();
   const [quote, setQuote] = useState(bibleQuotes.en[0]);
 
+  // Update quote when language changes
   useEffect(() => {
     const quotes = bibleQuotes[language] || bibleQuotes.en;
     const randomIndex = Math.floor(Math.random() * quotes.length);
     setQuote(quotes[randomIndex]);
-  }, [language]);
+  }, [language]); // Added language as dependency
 
   return (
     <section className="py-16 bg-gray-900">
@@ -109,6 +110,7 @@ export default function DailyQuote() {
         <h2 className="text-2xl md:text-3xl font-bold mb-8 text-white">
           {t('home.dailyQuote')}
         </h2>
+        
         <div className="max-w-3xl mx-auto">
           <blockquote className="text-xl italic mb-4 text-white">
             &quot;{quote.text}&quot;
