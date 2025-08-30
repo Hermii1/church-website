@@ -20,8 +20,8 @@ export default function Header() {
     <header className="bg-church-black text-white py-4 border-b border-gray-800">
       <div className="container mx-auto px-4 flex justify-between items-center">
         <Link href="/" className="text-2xl font-bold flex items-center">
-          <span className="text-church-orange-light">Church</span>
-          <span className="text-white">Name</span>
+          <span className="text-church-orange-light">Shiloh</span>
+          <span className="text-white">Church</span>
         </Link>
         
         {/* Desktop Navigation */}
