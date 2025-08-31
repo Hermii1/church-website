@@ -98,14 +98,14 @@ export default function About() {
 </section>
 
       {/* Content Sections */}
-      <section className="py-12 bg-white">
+      <section className="py-12 bg-black">
         <div className="container mx-auto px-4">
           
           {/* Our Origin Section */}
           {activeSection === 'origin' && (
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold mb-6 text-gray-900">What is the Church?</h2>
-              <div className="prose prose-lg text-gray-700">
+              <h2 className="text-3xl font-bold mb-6 text-white-900">What is the Church?</h2>
+              <div className="prose prose-lg text-white-700">
                 <p className="mb-4">
                   The Church of Shiloh is a multilingual, gospel-believing congregation primarily serving the Ethiopian and Eritrean communities residing in the New Orleans metro area.
                 </p>
@@ -191,19 +191,19 @@ export default function About() {
       </section>
 
       {/* Leadership Section */}
-      <section className="py-16 bg-gray-100">
+      <section className="py-16 bg-black text-white">
         <div className="container mx-auto px-4">
 
           <div className="text-center mb-12">
-            <h2 className="text-gray-500 text-2xl font-semibold mb-2">Our Team</h2>
-            <h3 className="text-4xl font-bold text-gray-900">Leadership</h3>
+            <h2 className="text-orange-500 text-2xl font-semibold mb-2">Our Team</h2>
+            <h3 className="text-4xl font-bold text-white">Leadership</h3>
           </div>
 
           <div className="max-w-4xl mx-auto mb-8">
-            <p className="text-gray-700 text-center mb-6">
+            <p className="text-white-700 text-center mb-6">
               Our local church is governed by a Board of Elders elected by the congregation. The Board selects a leader, who is approved by the congregation, to manage the church&apos;s spiritual and administrative affairs.
             </p>
-            <p className="text-gray-900 font-semibold text-center">
+            <p className="text-white-700 font-semibold text-center">
               Contact the Church Leadership for any inquiries
             </p>
           </div>
