@@ -1,11 +1,14 @@
 import Link from 'next/link'
 import { useState } from 'react'
+import { useRouter } from 'next/router'
 import LanguageSelector from '../layout/LanguageSelector'
 import { useTranslation } from '@/hooks/useTranslation'
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isLight, setIsLight] = useState(false)
   const { t } = useTranslation()
+  const router = useRouter()
 
   const navItems = [
     { name: t('navigation.home'), path: '/' },
@@ -15,6 +18,15 @@ export default function Header() {
     { name: t('navigation.programs'), path: '/programs' },
     { name: t('navigation.contact'), path: '/contact' },
   ]
+
+  // Theme toggle handler
+  const handleThemeToggle = () => {
+    setIsLight(prev => {
+      const next = !prev;
+      document.documentElement.setAttribute('data-theme', next ? 'light' : '');
+      return next;
+    });
+  };
 
   return (
     <header className="bg-church-black text-white py-4 border-b border-gray-800">
@@ -26,13 +38,13 @@ export default function Header() {
         
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-6">
-          <nav>
-            <ul className="flex space-x-8">
+          <nav className="nav-container">
+            <ul>
               {navItems.map((item, index) => (
-                <li key={index}>
+                <li key={index} style={{ display: 'inline-block' }}>
                   <Link 
-                    href={item.path} 
-                    className="text-gray-300 hover:text-church-orange-light transition-colors font-medium"
+                    href={item.path}
+                    className={`nav-link${router.pathname === item.path ? ' active' : ''}`}
                   >
                     {item.name}
                   </Link>
@@ -41,6 +53,12 @@ export default function Header() {
             </ul>
           </nav>
           <LanguageSelector />
+          <div className="hidden md:block">
+            {/* Theme Toggle Button */}
+            <button className="theme-toggle" aria-label="Toggle theme" onClick={handleThemeToggle}>
+              🌓
+            </button>
+          </div>
         </div>
         
         {/* Mobile Menu Button */}
@@ -60,13 +78,17 @@ export default function Header() {
           <div className="container mx-auto px-4">
             <div className="mb-4">
               <LanguageSelector />
+              {/* Theme Toggle Button for mobile */}
+              <button className="theme-toggle" aria-label="Toggle theme" onClick={handleThemeToggle}>
+                🌓
+              </button>
             </div>
             <ul className="space-y-3">
               {navItems.map((item, index) => (
                 <li key={index}>
                   <Link 
-                    href={item.path} 
-                    className="block text-gray-300 hover:text-church-orange-light transition-colors font-medium py-2"
+                    href={item.path}
+                    className={`nav-link${router.pathname === item.path ? ' active' : ''} block py-2`}
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {item.name}

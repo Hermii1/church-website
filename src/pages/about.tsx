@@ -38,60 +38,64 @@ export default function About() {
       </Head>
 
       {/* Hero Section */}
-      <section className="relative h-64 flex items-center justify-center bg-gray-100">
-        <div className="text-center px-4">
-          <h1 className="text-4xl font-bold mb-4 text-gray-900">ABOUT US</h1>
-          <p className="text-xl text-gray-700">Get to know our church family</p>
-        </div>
-      </section>
+      <section className="relative h-96 flex items-center justify-center bg-gray-100">
+  {/* Hero Background Image */}
+  <div className="absolute inset-0 w-full h-full min-h-[384px]">
+    <Image
+      src="/images/hero/about-hero.jpg"
+      alt="About Us Hero"
+      fill
+      className="object-cover opacity-40"
+      priority
+      sizes="100vw"
+    />
+  </div>
+  {/* Hero Text */}
+  <div className="relative text-center px-4 z-10">
+    <h1 className="text-4xl font-bold mb-4 text-gray-900">ABOUT US</h1>
+    <p className="text-xl text-gray-700">Get to know our church family</p>
+  </div>
+</section>
 
       {/* Navigation Tabs */}
-      <section className="py-8 bg-white sticky top-0 z-10 shadow-md">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-wrap justify-center gap-2 md:gap-4">
-            <button
-              onClick={() => setActiveSection('origin')}
-              className={`px-4 py-2 rounded-lg font-medium transition-colors ${
-                activeSection === 'origin' 
-                  ? 'bg-church-orange text-white border border-church-orange' 
-                  : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
-              }`} 
-            >
-              Our Origin
-            </button>
-            <button
-              onClick={() => setActiveSection('belief')}
-              className={`px-4 py-2 rounded-lg font-medium transition-colors ${
-                activeSection === 'belief' 
-                  ? 'bg-white text-church-orange border border-church-orange' 
-                  : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
-              }`}
-            >
-              Our Belief
-            </button>
-            <button
-              onClick={() => setActiveSection('vision')}
-              className={`px-4 py-2 rounded-lg font-medium transition-colors ${
-                activeSection === 'vision' 
-                  ? 'bg-white text-church-orange border border-church-orange' 
-                  : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
-              }`}
-            >
-              Our Vision
-            </button>
-            <button
-              onClick={() => setActiveSection('mission')}
-              className={`px-4 py-2 rounded-lg font-medium transition-colors ${
-                activeSection === 'mission' 
-                  ? 'bg-white text-church-orange border border-church-orange' 
-                  : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
-              }`}
-            >
-              Our Mission
-            </button>
-          </div>
-        </div>
-      </section>
+<section className="py-8 shadow-md">
+  <div className="container mx-auto px-4">
+    <div className="flex flex-wrap justify-center gap-2 md:gap-4">
+      <button
+        onClick={() => setActiveSection('origin')}
+        className={`btn-primary font-medium ${
+          activeSection === 'origin' ? 'border border-church-orange' : ''
+        }`}
+      >
+        Our Origin
+      </button>
+      <button
+        onClick={() => setActiveSection('belief')}
+        className={`btn-primary font-medium ${
+          activeSection === 'belief' ? 'border border-church-orange' : ''
+        }`}
+      >
+        Our Belief
+      </button>
+      <button
+        onClick={() => setActiveSection('vision')}
+        className={`btn-primary font-medium ${
+          activeSection === 'vision' ? 'border border-church-orange' : ''
+        }`}
+      >
+        Our Vision
+      </button>
+      <button
+        onClick={() => setActiveSection('mission')}
+        className={`btn-primary font-medium ${
+          activeSection === 'mission' ? 'border border-church-orange' : ''
+        }`}
+      >
+        Our Mission
+      </button>
+    </div>
+  </div>
+</section>
 
       {/* Content Sections */}
       <section className="py-12 bg-white">
@@ -189,8 +193,9 @@ export default function About() {
       {/* Leadership Section */}
       <section className="py-16 bg-gray-100">
         <div className="container mx-auto px-4">
+
           <div className="text-center mb-12">
-            <h2 className="text-orange-500 text-2xl font-semibold mb-2">our team</h2>
+            <h2 className="text-gray-500 text-2xl font-semibold mb-2">Our Team</h2>
             <h3 className="text-4xl font-bold text-gray-900">Leadership</h3>
           </div>
 

@@ -55,8 +55,9 @@ export default function Hero() {
           {t('home.subtitle')}
         </p>
         <Link href="/contact">
-          <button className=
-      "bg-orange-200 hover:bg-orange-300 text-orange-700 px-6 py-3 rounded-lg transition-colors duration-300 font-medium">
+          <button
+            className="btn-primary"
+          >
             {t('home.joinButton')}
           </button>
         </Link>
