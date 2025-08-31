@@ -123,15 +123,15 @@ export default function Programs() {
       </Head>
 
       {/* Hero Section */}
-      <section className="relative h-64 flex items-center justify-center bg-gray-100">
+      <section className="relative h-64 flex items-center justify-center bg-black">
         <div className="text-center px-4">
-          <h1 className="text-4xl font-bold mb-4 text-gray-900">{t('programs.heroTitle')}</h1>
-          <p className="text-xl text-gray-700">{t('programs.heroSubtitle')}</p>
+          <h1 className="text-4xl font-bold mb-4 text-white">{t('programs.heroTitle')}</h1>
+          <p className="text-xl text-gray-300">{t('programs.heroSubtitle')}</p>
         </div>
       </section>
 
       {/* Day Filter */}
-      <section className="py-8 bg-white sticky top-0 z-10 shadow-md">
+      <section className="py-8 shadow-md">
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap justify-center gap-2 md:gap-4">
             {days.map(day => (
@@ -152,12 +152,12 @@ export default function Programs() {
       </section>
 
       {/* Gatherings Section */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-black">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             {filteredGatherings.map(daySchedule => (
               <div key={daySchedule.day} className="mb-12">
-                <h2 className="text-3xl font-bold mb-6 text-gray-900 border-b-2 border-church-orange-light pb-2">
+                <h2 className="text-3xl font-bold mb-6 text-white border-b-2 border-church-orange-light pb-2">
                   {daySchedule.day}
                 </h2>
                 
@@ -204,7 +204,7 @@ export default function Programs() {
           </div>
 
           {/* Additional Information */}
-          <div className="max-w-4xl mx-auto mt-12 bg-church-orange-light/10 rounded-xl p-6 border border-church-orange-light">
+          <div className="max-w-4xl mx-auto mt-12 bg-white rounded-xl p-6 border border-church-orange-light">
             <h3 className="text-xl font-bold text-gray-900 mb-4">{t('programs.importantNotes')}</h3>
             <ul className="text-gray-700 space-y-2">
               <li className="flex items-start">
@@ -236,11 +236,11 @@ export default function Programs() {
             {t('programs.joinUsDesc')}
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <button className="bg-church-orange hover:bg-church-orange-light text-white font-bold py-3 px-8 rounded-lg transition-colors">
+            <button className="bg-gray-800 hover:bg-black text-white font-bold py-3 px-8 rounded-lg transition-colors">
               {t('common.getDirections')}
             </button>
             <Link href="/contact" passHref>
-              <button className="bg-gray-800 hover:bg-gray-900 text-white font-bold py-3 px-8 rounded-lg transition-colors">
+              <button className="btn-primary font-bold">
                 {t('common.contactUs')}
               </button>
             </Link>
