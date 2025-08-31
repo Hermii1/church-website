@@ -58,19 +58,19 @@ export default function Events() {
       </Head>
 
       {/* Hero Section */}
-      <section className="relative h-64 flex items-center justify-center bg-gray-100">
+      <section className="relative h-64 flex items-center justify-center bg-black">
         <div className="text-center px-4">
-          <h1 className="text-4xl font-bold mb-4 text-gray-900">{t('events.heroTitle')}</h1>
-          <p className="text-xl text-gray-700">{t('events.heroSubtitle')}</p>
+          <h1 className="text-4xl font-bold mb-4 text-white">{t('events.heroTitle')}</h1>
+          <p className="text-xl text-gray-300">{t('events.heroSubtitle')}</p>
         </div>
       </section>
 
       {/* Events List */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-black">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">{t('events.upcomingEvents')}</h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <div className="text-center mb-12 text-gray-300">
+            <h2 className="text-3xl font-bold text-white mb-4">{t('events.upcomingEvents')}</h2>
+            <p className="text-lg text-gray-300 max-w-2xl mx-auto">
               {t('events.upcomingDescription')}
             </p>
           </div>
@@ -80,15 +80,15 @@ export default function Events() {
               <div key={index} className="bg-gray-50 rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow">
                 <div className="flex flex-col md:flex-row md:items-start">
                   {/* Date Box */}
-                  <div className="md:w-1/4 mb-4 md:mb-0">
-                    <div className="bg-church-orange text-white text-center py-3 px-4 rounded-lg">
+                  <div className="md:w-1/2 mb-4 md:mb-0">
+                    <div className="bg-gray-800 text-white text-center py-4 px-1 rounded-lg">
                       <p className="font-semibold">{event.date}</p>
                       <p className="text-sm">{event.time}</p>
                     </div>
                   </div>
                   
                   {/* Event Details */}
-                  <div className="md:w-3/4">
+                  <div className="md:w-3/4 md:ml-8">
                     <h3 className="text-xl font-bold text-gray-900 mb-2">{event.title}</h3>
                     <p className="text-gray-700 mb-3">{event.description}</p>
                     
@@ -113,11 +113,11 @@ export default function Events() {
       </section>
 
       {/* Regular Gatherings */}
-      <section className="py-16 bg-gray-100">
+      <section className="py-16 bg-black">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">{t('events.regularGatherings')}</h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <h2 className="text-3xl font-bold text-white-900 mb-4">{t('events.regularGatherings')}</h2>
+            <p className="text-lg text-white-600 max-w-2xl mx-auto">
               {t('events.regularDescription')}
             </p>
           </div>
@@ -126,13 +126,13 @@ export default function Events() {
             <div className="bg-white p-6 rounded-lg shadow-md">
               <h3 className="text-xl font-bold text-gray-900 mb-4">{t('events.sundayServices')}</h3>
               <ul className="space-y-2">
-                <li className="flex justify-between">
+                <li className="flex justify-between text-gray-700">
                   <span>{t('events.worshipService')}</span>
-                  <span className="text-church-orange font-medium">10:00 AM</span>
+                  <span className="text-gray-700 font-medium">10:00 AM</span>
                 </li>
-                <li className="flex justify-between">
+                <li className="flex justify-between text-gray-700">
                   <span>{t('events.sundaySchool')}</span>
-                  <span className="text-church-orange font-medium">9:00 AM</span>
+                  <span className="text-gray-700 font-medium">9:00 AM</span>
                 </li>
               </ul>
             </div>
@@ -140,13 +140,13 @@ export default function Events() {
             <div className="bg-white p-6 rounded-lg shadow-md">
               <h3 className="text-xl font-bold text-gray-900 mb-4">{t('events.weekdayActivities')}</h3>
               <ul className="space-y-2">
-                <li className="flex justify-between">
+                <li className="flex justify-between text-gray-700">
                   <span>{t('events.bibleStudy')}</span>
-                  <span className="text-church-orange font-medium">{t('events.wed7pm')}</span>
+                  <span className="text-gray-700 font-medium">{t('events.wed7pm')}</span>
                 </li>
-                <li className="flex justify-between">
+                <li className="flex justify-between text-gray-700">
                   <span>{t('events.prayerMeeting')}</span>
-                  <span className="text-church-orange font-medium">{t('events.fri630pm')}</span>
+                  <span className="text-gray-700 font-medium">{t('events.fri630pm')}</span>
                 </li>
               </ul>
             </div>
