@@ -27,68 +27,68 @@ const bibleQuotes = {
   ],
   am: [
     {
-      text: "እግዚአብሔር የሚያደርግላችሁን እቅድ አውቃለሁና፥ እርሱ ደግም ነው፥ ሥጋትም አይደለም፥ ወደፊትም ተስፋ ይሰጣችኋል።",
+      text: "ለእናንተ የማስባትን አሳብ እኔ አውቃለሁ፤ ፍጻሜና ተስፋ እሰጣችሁ ዘንድ የሰላም አሳብ ነው እንጂ የክፉ ነገር አይደለም።",
       verse: "ኤርምያስ 29:11"
     },
     {
-      text: "በልብህ ሁሉ በእግዚአብሔር ላይ ግጠም፥ በእውቀትህም ላይ አትመካ።",
+      text: "በፍጹም ልብህ በእግዚአብሔር ታመን፥ በራስህም ማስተዋል አትደገፍ፤",
       verse: "ምሳሌ 3:5"
     },
     {
-      text: "እኔ የምችለውን ሁሉ የሚያበረታኝ በክርስቶስ ነው።",
+      text: "ኃይልን በሚሰጠኝ በክርስቶስ ሁሉን እችላለሁ።",
       verse: "ፊልጵስዩስ 4:13"
     },
     {
-      text: "እግዚአብሔር እረኛዬ ነው፥ ምንም አልጎድልም።",
+      text: "እግዚአብሔር እረኛዬ ነው፥ የሚያሳጣኝም የለም።",
       verse: "መዝሙር 23:1"
     },
     {
-      text: "ነገር ግን መጀመርያ የእግዚአብሔርን መንግሥት እና ፍትሁን ፈልጉ፥ ይህም ሁሉ ይጨመርላችኋል።",
+      text: "ነገር ግን አስቀድማችሁ የእግዚአብሔርን መንግሥት ጽድቁንም ፈልጉ፥ ይህም ሁሉ ይጨመርላችኋል።",
       verse: "ማቴዎስ 6:33"
     }
   ],
   ti: [
     {
-      text: "ኣነ እፈልግ እየ ንዕኻትኩም ዘሎኒ መደብ እፈልግ እየ፡ ሕማቕ ኣይኮነን፡ ግን ሰላምን ተስፋን እዩ።",
+      text: "ኣኻትኩም ዘለኒ ሓሳብ ኣነ እፈልጦ እየ፤ ሰናይ ፍፃመን ተስፋን ክህበኩም፥ ናይ ሰላም ሓሳብ እምበር፥ ናይ ክፉእ ሓሳብ ኣይኮነን።",
       verse: "ኤርምያስ 29:11"
     },
     {
-      text: "ብልብኻ ዅሉ ኣብ እግዚአብሔር ተጸግዕ፡ ብፍልጠትኻ ግና ኣይትጽግዕ።",
+      text: "ብምሉእ ልብኻ ብእግዚኣብሄር እመን፤ ብናይ ባዕልኻ ምስትውዓልውን ኣይትተኣማመን፤",
       verse: "ምሳሌ 3:5"
     },
     {
-      text: "ኵሉ ነገር በዚ ዘደግፈኒ ኣብ ክርስቶስ እተጻወር።",
+      text: "በቲ ሓይሊ ዝህበኒ ክርስቶስ፥ ንዅሉ ኽገብሮ እኽእል እየ።",
       verse: "ፊልጵስዩስ 4:13"
     },
     {
-      text: "እግዚአብሔር እረኣይየ እዩ፥ ኣየድልየን እየ።",
+      text: "እግዚአብሔር ጓሳይየይ እዩ፥ ዘስእነኒውን የለን።",
       verse: "መዝሙር 23:1"
     },
     {
-      text: "ነገር ግን ቀዳምነት ስልጣን እግዚአብሔርን ፍትሕኡን ድለዩ፥ እዚ ኸኣ ኵሉ ይውሃበኩም።",
+      text: "ንስኻትኩም ግና፥ ኣቐዲምኩም መንግስቲ እግዚኣብሄርን ፅድቁን ደኣ ድለዩ፤ እዝ ዅሉ ድማ ኽውሰኸኩም እዩ።",
       verse: "ማቴዎስ 6:33"
     }
   ],
   om: [
     {
-      text: "Ani Waaqayyo akka tasaa, sodaa hin taane, fuula duraafi kajeelaa ta'uu beeka.",
-      verse: "Yeremayaas 29:11"
+      text: "Yaada isinii qabu natu beeka; yaanni kunillee yaada hamaa uduu hin taane abdii yaada nagayaa mishaa ka isin eeggattan ka raawwatamu'uuf ta'u ka uf keessaa qabu.",
+      verse: "Raajii Ermiyaasii 29:11"
     },
     {
-      text: "Waaqayyo irratti hunda ofii gadi dhiisi, beekumsa kee irratti hin hirkanjin.",
-      verse: "Mammaaksa 3:5"
+      text: "Garaa kee guutu'uun Rabbiin abdadhu; hubannaa keetitti hin irkatin.",
+      verse: "Mammaakaa 3:5"
     },
     {
-      text: "Waan hunda kan na dandeessise Kiristosittiin nan danda'a.",
-      verse: "Filiphisiyoos 4:13"
+      text: "Huminna ka naa kennu Kristosiin waan maraa raawwachu'uuf, ni dandda'a.",
+      verse: "Filiphisiiyusii 4:13"
     },
     {
       text: "Gooftaan kiyya fayyaa koo; homaa hin hiyyoomne.",
       verse: "Waamaa 23:1"
     },
     {
-      text: "Fuula duraa mootummaa Waaqayyoo fi sirna isaa barbaadaa, wantoonni kanaas hundi isinirraa dabalamti.",
-      verse: "Mataa 6:33"
+      text: "Isin garuu, durssa'aatii Mootummaa Waaqaatii fi qulqullaayoma isaa'llee barbaadaa, wonitti hafe marrinuu isiniif ni dabalama.",
+      verse: "Wongeela Maatewos 6:33"
     }
   ]
 };
