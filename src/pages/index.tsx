@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Church Name | {t('navigation.home')}</title>
+        <title>Shiloh Church | {t('navigation.home')}</title>
         <meta name="description" content={t('home.welcome')} />
       </Head>
 
