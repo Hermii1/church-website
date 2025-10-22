@@ -3,10 +3,10 @@ import { useState } from 'react'
 import { useRouter } from 'next/router'
 import LanguageSelector from '../layout/LanguageSelector'
 import { useTranslation } from '@/hooks/useTranslation'
+import Image from 'next/image'
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [isLight, setIsLight] = useState(false)
   const { t } = useTranslation()
   const router = useRouter()
 
@@ -19,21 +19,24 @@ export default function Header() {
     { name: t('navigation.contact'), path: '/contact' },
   ]
 
-  // Theme toggle handler
-  const handleThemeToggle = () => {
-    setIsLight(prev => {
-      const next = !prev;
-      document.documentElement.setAttribute('data-theme', next ? 'light' : '');
-      return next;
-    });
-  };
-
   return (
     <header className="bg-church-black text-white py-4 border-b border-gray-800">
       <div className="container mx-auto px-4 flex justify-between items-center">
-        <Link href="/" className="text-2xl font-bold flex items-center">
-          <span className="text-church-orange-light">Shiloh</span>
-          <span className="text-white">Church</span>
+        <Link href="/" className="flex items-center space-x-3">
+          {/* Logo */}
+          <div className="w-10 h-10 relative">
+            <Image
+              src="/images/hero/logo.jpg"
+              alt="Shiloh Church Logo"
+              width={40}
+              height={40}
+              className="object-contain"
+            />
+          </div>
+          <div className="text-2xl font-bold flex items-center">
+            <span className="text-church-orange-light">Shiloh</span>
+            <span className="text-white">Church</span>
+          </div>
         </Link>
         
         {/* Desktop Navigation */}
@@ -53,12 +56,6 @@ export default function Header() {
             </ul>
           </nav>
           <LanguageSelector />
-          <div className="hidden md:block">
-            {/* Theme Toggle Button */}
-            <button className="theme-toggle" aria-label="Toggle theme" onClick={handleThemeToggle}>
-              🌓
-            </button>
-          </div>
         </div>
         
         {/* Mobile Menu Button */}
@@ -78,10 +75,6 @@ export default function Header() {
           <div className="container mx-auto px-4">
             <div className="mb-4">
               <LanguageSelector />
-              {/* Theme Toggle Button for mobile */}
-              <button className="theme-toggle" aria-label="Toggle theme" onClick={handleThemeToggle}>
-                🌓
-              </button>
             </div>
             <ul className="space-y-3">
               {navItems.map((item, index) => (

@@ -16,9 +16,9 @@ export default function Footer() {
               {t('footer.churchDescription')}
             </p>
             <p className="text-gray-400">
-              123 Church Street<br />
-              City, State 12345<br />
-              Phone: (123) 456-7890
+              2001 Airline Dr<br />
+              Metairie, LA 70001<br />
+              Phone: (504) 555-0123
             </p>
           </div>
           
